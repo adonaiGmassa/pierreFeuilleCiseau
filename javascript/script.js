@@ -8,6 +8,7 @@ function play(CHOIX_JOUEUR) {
     if (CHOIX_JOUEUR === CHOIX_ADVERSAIRE) {
         TextResultat = `Égalité! Vous avez choisi ${CHOIX_JOUEUR} et l'ordinateur aussi.`;
     } 
+    
     else {
         if (
             (CHOIX_JOUEUR === 'pierre' && CHOIX_ADVERSAIRE === 'ciseaux') ||
@@ -23,4 +24,5 @@ function play(CHOIX_JOUEUR) {
         }
         document.getElementById('TextResultat').innerText = TextResultat;
     }
+
 }
