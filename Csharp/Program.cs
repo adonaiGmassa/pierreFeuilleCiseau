@@ -2,9 +2,9 @@ using System;
 
 class Program
 {
-    
-    #region Variables
 
+    #region Variables
+    
     // Liste de choix possible 
     public string[] choix = { "Pierre", "Feuille", "Ciseau" };
 
@@ -19,38 +19,41 @@ class Program
     {
         return char.ToUpper(input[0]) + input.Substring(1);
     }
+
     #endregion
-
-        static void choixJoueur()
+    
+    static void choixJoueur()
+    {
+        do
         {
-            do
+            // Demander à l'utilisateur de faire un choix
+            Console.Write("Entrez votre choix entre Pierre, Feuille ou Ciseau : ");
+            choixUtilisateur = Console.ReadLine();
+
+            // Vérification si l'utilisateur a entré quelque chose 
+            if (string.IsNullOrEmpty(choixUtilisateur))
             {
-                // Demander à l'utilisateur de faire un choix
-                Console.Write("Entrez votre choix entre Pierre, Feuille ou Ciseau : ");
-                choixUtilisateur = Console.ReadLine();
-
-                // Vérification si l'utilisateur a entré quelque chose 
-                if (string.IsNullOrEmpty(choixUtilisateur))
-                {
-                    Console.WriteLine("Veuille rentre un choix");
-                }
-
-                // Vérification si l'utilisateur a entré un choix valide
-                if (Array.IndexOf(choixPossibles, choixUtilisateur) == -1)
-                {
-                    Console.WriteLine("Choix invalide. Essayez encore.");
-                }
-
+                Console.WriteLine("Veuille rentre un choix");
             }
-            while(Array.IndexOf(choixPossibles, choixUtilisateur) == -1 || string.IsNullOrEmpty(choixUtilisateur))
-            
+
+            // Vérification si l'utilisateur a entré un choix valide
+            if (Array.IndexOf(choixPossibles, choixUtilisateur) == -1)
+            {
+                Console.WriteLine("Choix invalide. Essayez encore.");
+            }
 
         }
+        while(Array.IndexOf(choixPossibles, choixUtilisateur) == -1 || string.IsNullOrEmpty(choixUtilisateur))
+    }
+    
+    static void Main()
+    {
+        //choixJoueur();
+        //choixOrdinateur();
+        //jeu();
+    }
     
 }
-static void Main()
-    {
 
-    }
 
     
