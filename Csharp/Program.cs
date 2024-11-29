@@ -54,6 +54,23 @@ class Program
         Console.WriteLine("L'ordinateur a choisi : " + choixOrdi);
         
     }
+
+    static void jeu()
+    {
+        if (choixUtilisateur == choixOrdi)
+        {
+            Console.WriteLine("C'est une égalité!");
+        }
+        else
+        {
+            if ((choixUtilisateur == "pierre" && choixOrdi == "ciseaux") || (choixUtilisateur == "papier" && choixOrdi == "pierre") ||(choixUtilisateur == "ciseaux" && choixOrdi == "papier"))
+            {Console.WriteLine("Vous avez gagné!");}
+            else
+            {Console.WriteLine("L'ordinateur a gagné !");}
+        }
+
+
+    }
     
     static void Main()
     {
