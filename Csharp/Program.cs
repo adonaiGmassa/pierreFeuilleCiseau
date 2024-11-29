@@ -10,8 +10,8 @@ class Program
 
     // Choix de l'ordinateur
     static int choixOrdiIndex = rand.Next(Choix.Length);
-    static string choixOrdi = Choix[choixOrdiIndex];
-    static string choixUtilisateur="";
+    static string choixOrdi = "" ;
+    static string choixUtilisateur = "" ;
     Random rand = new Random();
 
     // Fonction pour mettre la première lettre en majuscule
@@ -44,6 +44,15 @@ class Program
 
         }
         while(Array.IndexOf(choixPossibles, choixUtilisateur) == -1 || string.IsNullOrEmpty(choixUtilisateur))
+    }
+
+    static void choixOrdinateur()
+    {
+        choixOrdi = Choix[choixOrdiIndex];
+        
+        // Affichage du choix de l'ordinateur 
+        Console.WriteLine("L'ordinateur a choisi : " + choixOrdi);
+        
     }
     
     static void Main()
