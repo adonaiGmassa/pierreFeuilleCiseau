@@ -22,7 +22,7 @@ class Program
         return char.ToUpper(input[0]) + input.Substring(1).ToLower();
     }
 
-    static void choixJoueur()
+    static void choixJoueur() s
     {
         do
         {
@@ -44,7 +44,7 @@ class Program
             }
 
         }
-        while(Array.IndexOf(choixPossibles, choixUtilisateur) == -1 || string.IsNullOrEmpty(choixUtilisateur))
+        while (Array.IndexOf(choixPossibles, choixUtilisateur) == -1 || string.IsNullOrEmpty(choixUtilisateur));
     }
 
     static void choixOrdinateur()
@@ -82,8 +82,8 @@ class Program
     static void Main()
     {
         // Appeler les différentes fonctions pour jouer
-        //choixJoueur();
-        //choixOrdinateur();
+        choixJoueur();
+        choixOrdinateur();
         //jeu();
     }
 

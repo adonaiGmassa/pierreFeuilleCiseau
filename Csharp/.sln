@@ -1,0 +1,4 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2022
+project("{cfb4f12f-a3e8-47ba-8c51-91912dfa8c6d}") = pierreFeuilleCiseau"pierreFeuilleCiseau.csproj", "{cfb4f12f-a3e8-47ba-8c51-91912dfa8c6d}"
+endproject
